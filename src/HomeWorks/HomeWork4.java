@@ -23,18 +23,18 @@ public class HomeWork4 {
         /*Задача 1:
         Пройти по массиву, вывести все элементы в прямом и в обратном порядке.*/
         System.out.println("Задача 1:");
-        System.out.println("Массив в прямом порядке:");
+        System.out.println("Массив в прямом порядке: ");
         for (int i : numbers) {
-            System.out.println(i);
+            System.out.print(i+ " ");
         }
-        System.out.println("И в обратном:");
+        System.out.println("\nИ в обратном:");
         for (int i = numbers.length - 1; i >= 0; i--) {
-            System.out.println(numbers[i]);
+            System.out.print(numbers[i] + " ");
         }
 
         /*Задача 2:
         Найти минимальный-максимальный элементы и вывести в консоль*/
-        System.out.println("Задача 2:");
+        System.out.println("\nЗадача 2:");
         int max = numbers[0];
         int min = numbers[0];
         for (int i = 1; i < numbers.length; i++) {
@@ -71,7 +71,7 @@ public class HomeWork4 {
         /*Задача 4:
         Найти и вывести количество нулевых элементов. Если нулевых элементов нет - вывести
         сообщение, что их нет.*/
-
+        System.out.println("Задача 4:");
 
         System.out.println("Введите размер массива");
         int arraySize2 = scanner.nextInt();
@@ -84,12 +84,29 @@ public class HomeWork4 {
         int zero = 0;
         for (int i =0; i< numbers2.length;i++) {
             if (numbers2[i] == 0) {
-                zero ++;
+                zero++;
             }
         }if (zero==0){
             System.out.println("Нулевых значение нет");
-        }else System.out.println("Количество нолей в массиве - " + zero);
+        }else System.out.println("Количество нолей в массиве: " + zero);
         scanner.close();
+
+        /*Задача 5:
+        Пройти по массиву и поменять местами элементы первый и последний, второй и
+        предпоследний и т.д.*/
+        System.out.println("Задача 5:");
+        int a =0;
+        int b =0;
+        for (int i =0,j=numbers2.length-1; i<numbers2.length/2; i++,j--) {
+            a=numbers2[i];
+            b=numbers2[j];
+            numbers2[i]=b;
+            numbers2[j]=a;
+        }
+        System.out.println(Arrays.toString(numbers2));
+
+
+
     }
 
 
