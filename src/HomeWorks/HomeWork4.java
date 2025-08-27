@@ -1,6 +1,7 @@
 package HomeWorks;
 
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class HomeWork4 {
@@ -79,7 +80,15 @@ public class HomeWork4 {
             System.out.print("Введите элемент массива: ");
             numbers2[i] = scanner.nextInt();
         }
-
+        System.out.println("Массив: " + Arrays.toString(numbers2));
+        int zero = 0;
+        for (int i =0; i< numbers2.length;i++) {
+            if (numbers2[i] == 0) {
+                zero ++;
+            }
+        }if (zero==0){
+            System.out.println("Нулевых значение нет");
+        }else System.out.println("Количество нолей в массиве - " + zero);
         scanner.close();
     }
 
