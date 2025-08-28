@@ -25,7 +25,7 @@ public class HomeWork4 {
         System.out.println("Задача 1:");
         System.out.println("Массив в прямом порядке: ");
         for (int i : numbers) {
-            System.out.print(i+ " ");
+            System.out.print(i + " ");
         }
         System.out.println("\nИ в обратном:");
         for (int i = numbers.length - 1; i >= 0; i--) {
@@ -82,30 +82,39 @@ public class HomeWork4 {
         }
         System.out.println("Массив: " + Arrays.toString(numbers2));
         int zero = 0;
-        for (int i =0; i< numbers2.length;i++) {
+        for (int i = 0; i < numbers2.length; i++) {
             if (numbers2[i] == 0) {
                 zero++;
             }
-        }if (zero==0){
+        }
+        if (zero == 0) {
             System.out.println("Нулевых значение нет");
-        }else System.out.println("Количество нолей в массиве: " + zero);
+        } else System.out.println("Количество нолей в массиве: " + zero);
         scanner.close();
 
         /*Задача 5:
         Пройти по массиву и поменять местами элементы первый и последний, второй и
         предпоследний и т.д.*/
         System.out.println("Задача 5:");
-        int a =0;
-        int b =0;
-        for (int i =0,j=numbers2.length-1; i<numbers2.length/2; i++,j--) {
-            a=numbers2[i];
-            b=numbers2[j];
-            numbers2[i]=b;
-            numbers2[j]=a;
+        int a = 0;
+        int b = 0;
+        for (int i = 0, j = numbers2.length - 1; i < numbers2.length / 2; i++, j--) {
+            a = numbers2[i];
+            b = numbers2[j];
+            numbers2[i] = b;
+            numbers2[j] = a;
         }
         System.out.println(Arrays.toString(numbers2));
 
-
+        /*Задача 6:
+        Проверить, является ли массив возрастающей последовательностью (каждое следующее
+        число больше предыдущего).*/
+        for (int i = 1; i < numbers2.length - 1; i++) {
+            if (numbers2[i] > numbers2[i + 1]) {
+                System.out.println("Массив не является возрастающей последовательностью");
+                break;
+            }
+        }
 
     }
 
