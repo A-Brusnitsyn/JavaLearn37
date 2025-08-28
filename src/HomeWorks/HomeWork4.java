@@ -2,6 +2,7 @@ package HomeWorks;
 
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class HomeWork4 {
@@ -90,7 +91,7 @@ public class HomeWork4 {
         if (zero == 0) {
             System.out.println("Нулевых значение нет");
         } else System.out.println("Количество нолей в массиве: " + zero);
-        scanner.close();
+
 
         /*Задача 5:
         Пройти по массиву и поменять местами элементы первый и последний, второй и
@@ -115,6 +116,50 @@ public class HomeWork4 {
                 break;
             }
         }
+
+        /*Задача *:
+        Имеется массив из неотрицательных чисел(любой). Представьте что массив
+        представляет целое число (Например массив {1,2,3} -> 123, {9,9,9} -> 999). Задача
+        добавить единицу к этому “числу” и на выходе получить исправленный массив. Массив не
+        содержит нуля в начале, кроме самого числа 0.
+        Пример:
+        Input: [1,4,0,5,6,3]
+        Output: [1,4,0,5,6,4]
+        Input: [9,9,9]
+        Output: [1,0,0,0]*/
+
+
+        //Думал над задачей, но не мог разобраться с тем как быть с массивом из 9...подглядел решение в домашках одногрупников и потом как понял...)
+        //в else if если значение массива =9 заменяем на 0, и так по всем значениям (в случае если массив только из 9)
+        //а потом в другом блоке if проверяем первое значение массива, и если оно =0, то добавляем к текущему массиву 1 и 0 заменяем на 1.
+
+        System.out.println("Задача *:");
+        System.out.println("Введите размер массива для последней задачи:");
+
+        int arraySize3 = scanner.nextInt();
+        int[] array1 = new int[arraySize3];
+        Random random = new Random();
+        for (int i = 0; i < array1.length; i++) {
+            array1[i]= random.nextInt(4,10);
+        }
+        System.out.println("Новый массив: "+ Arrays.toString(array1));
+
+        for (int i = array1.length-1; i >=0; i--) {
+            if (array1[i]<9){
+                array1[i]++;
+                break;
+            } else if (array1[i]==9) {
+                array1[i]=0;
+            }
+        }
+        if (array1[0]==0){
+            array1=new int[array1.length+1];
+            array1[0]=1;
+
+        }
+        scanner.close();
+        System.out.println(Arrays.toString(array1));
+
 
     }
 
