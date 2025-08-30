@@ -55,7 +55,6 @@ public class Task1 {
                     sumPob += array[i][j];
                 }
             }
-
         }
         System.out.println("Сумма значений на главной диагонали: " + sumMain);
         System.out.println("Сумма значений на побочной диагонали: " + sumPob);
