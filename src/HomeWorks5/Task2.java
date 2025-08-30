@@ -1,7 +1,6 @@
 package HomeWorks5;
 
 
-
 public class Task2 {
     public static void main(String[] args) {
 
@@ -19,13 +18,13 @@ public class Task2 {
         W B W B W B W B
         B W B W B W B W */
 
-        String [][] arrayDesk = new String[8][8];
-        for (int i=0; i<arrayDesk.length;i++){
+        String[][] arrayDesk = new String[8][8];
+        for (int i = 0; i < arrayDesk.length; i++) {
             for (int j = 0; j < arrayDesk[i].length; j++) {
-                if ((i+j)%2==0){
-                    arrayDesk[i][j]="W";
+                if ((i + j) % 2 == 0) {
+                    arrayDesk[i][j] = "W";
                 } else
-                    arrayDesk[i][j]="B";
+                    arrayDesk[i][j] = "B";
             }
         }
         for (int i = 0; i < arrayDesk.length; i++) {
