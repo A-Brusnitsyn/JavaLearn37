@@ -18,14 +18,23 @@ public class TaskStar {
         System.out.println("Enter columns: ");
         int columns = scanner.nextInt();
         int[][] arrSnake = new int[rows][columns];
+        int num = 1;
 
         for (int i = 0; i < arrSnake.length; i++) {
-
+            if (i%2==0){
+                for (int j = 0; j < arrSnake[i].length; j++) {
+                    arrSnake[i][j]=num++;
+                }
+            } else {
+                for (int j = arrSnake[i].length-1; j >=0 ; j--) {
+                    arrSnake[i][j]=num++;
+                }
+            }
 
         }
         for (int i = 0; i < arrSnake.length; i++) {
             for (int j = 0; j < arrSnake[i].length; j++) {
-                System.out.println(arrSnake[i][j] + " ");
+                System.out.printf("%3d", arrSnake[i][j]);
             }
             System.out.println();
         }
