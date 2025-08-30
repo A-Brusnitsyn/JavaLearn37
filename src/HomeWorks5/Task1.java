@@ -33,7 +33,26 @@ public class Task1 {
             }
 
         }
-        System.out.println(Arrays.deepToString(array));
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.printf("%3d", array[i][j]);
+            }
+            System.out.println();
+        }
         System.out.println("Сумма всех значений в массиве: " + sum);
+
+        /*Задача 3:
+        Найдите сумму элементов на главной диагонали*/
+        int sumMain = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (i == j) {
+                    sumMain += array[i][j];
+                }
+            }
+
+        }
+        System.out.println("Сумма значений на главной диагонали: " + sumMain);
     }
 }

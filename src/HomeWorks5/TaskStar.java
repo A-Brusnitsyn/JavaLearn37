@@ -21,13 +21,13 @@ public class TaskStar {
         int num = 1;
 
         for (int i = 0; i < arrSnake.length; i++) {
-            if (i%2==0){
+            if (i % 2 == 0) {
                 for (int j = 0; j < arrSnake[i].length; j++) {
-                    arrSnake[i][j]=num++;
+                    arrSnake[i][j] = num++;
                 }
             } else {
-                for (int j = arrSnake[i].length-1; j >=0 ; j--) {
-                    arrSnake[i][j]=num++;
+                for (int j = arrSnake[i].length - 1; j >= 0; j--) {
+                    arrSnake[i][j] = num++;
                 }
             }
 
@@ -40,4 +40,5 @@ public class TaskStar {
         }
 
     }
+
 }
