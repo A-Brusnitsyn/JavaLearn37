@@ -44,15 +44,21 @@ public class Task1 {
         /*Задача 3:
         Найдите сумму элементов на главной диагонали*/
         int sumMain = 0;
+        int sumPob = 0;
 
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (i == j) {
                     sumMain += array[i][j];
                 }
+                if (i + j == array.length - 1) {
+                    sumPob += array[i][j];
+                }
             }
 
         }
         System.out.println("Сумма значений на главной диагонали: " + sumMain);
+        System.out.println("Сумма значений на побочной диагонали: " + sumPob);
+
     }
 }
