@@ -1,14 +1,19 @@
 package HomeWork9.Task1;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
     private String name;
 
-    public Dog(String name){
-        this.name=name;
+    public Dog(String name) {
+        this.name = name;
     }
 
-    public Dog(){
+    //Приватный конструктор.
+    private Dog() {
+    }
 
+    //Метод для создания нового объекта внутри класса.
+    public static Dog createDog(){
+        return new Dog();
     }
 
     public String getName() {
@@ -26,7 +31,7 @@ public class Dog extends Animal{
 
     @Override
     public void eat(String food) {
-        if (food == "Meat"){
+        if (food == "Meat") {
             System.out.println(name + " любит мясо!");
         } else {
             System.out.println(food + " не любит, но непрочь погрызть!");

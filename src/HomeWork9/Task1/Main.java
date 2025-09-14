@@ -13,8 +13,11 @@ package HomeWork9.Task1;
 обойти ограничение, наложенное конструктором выше. Объяснить, как работают оба
 способа*/
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Animal dog = new Dog("Овчарка");
         dog.voice();
         dog.eat("Meat");
@@ -31,5 +34,18 @@ public class Main {
         rabbit.eat("Meat");
         rabbit.eat("Grass");
         rabbit.eat("Морковку");
+
+        //создание нового объекта когда конструктор приватный. Вариант 1.
+        Dog dogPrivate = Dog.createDog();
+        dogPrivate.voice();
+        dogPrivate.eat("Grass");
+
+        //Создание нового объекта через рефлексию
+        Constructor<Dog> constructor=Dog.class.getDeclaredConstructor();
+        constructor.setAccessible(true);
+        Dog dogReflex = constructor.newInstance();
+        dogReflex.setName("Rex");
+        dogReflex.voice();
+        dogReflex.eat("Meat");
     }
 }
