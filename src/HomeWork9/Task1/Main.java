@@ -41,7 +41,7 @@ public class Main {
         dogPrivate.eat("Grass");
 
         //Создание нового объекта через рефлексию
-        Constructor<Dog> constructor=Dog.class.getDeclaredConstructor();
+        Constructor<Dog> constructor = Dog.class.getDeclaredConstructor();
         constructor.setAccessible(true);
         Dog dogReflex = constructor.newInstance();
         dogReflex.setName("Rex");

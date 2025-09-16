@@ -78,6 +78,7 @@ public class User implements Cloneable {
 
     //глубокое клонирование
     public User deepClone(){
+
         return new User(this.age,this.login,this.email,new Link(this.link.getUrl()));
     }
 }
