@@ -39,6 +39,7 @@ public class TaskStar {
         } else {
             System.out.println("Введено не число! Повторите попытку.");
         }
+        sc.close();
 
     }
 
