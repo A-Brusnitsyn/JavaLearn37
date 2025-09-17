@@ -1,7 +1,5 @@
 package HomeWork11;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Scanner;
 
 /**
@@ -10,25 +8,13 @@ import java.util.Scanner;
  * <p>
  * <p>
  * <p>
- * 5. Вывести на консоль новую строку, которой задублирована каждая буква из
- * начальной строки. Например, "Hello" -> "HHeelllloo".
- * Задача *:
- * Дана строка произвольной длины с произвольными словами. Написать программу для
- * проверки является ли любое выбранное слово в строке палиндромом.
- * Например, есть строка, вводится число 3, значит необходимо проверить является ли
- * 3-е слово в этой строке палиндромом.
- * Предусмотреть предупреждающие сообщения на случаи ошибочных ситуаций:
- * например, в строке 5 слов, а на вход программе передали число 500.
+ * <p>
+
  */
 
-public class Main {
+public class TasksOneFive {
     public static void main(String[] args) {
 
-        task1();
-
-    }
-
-    static void task1() {
 
         /**1. Ввести 3 строки с консоли, найти самую короткую и самую длинную строки. Вывести
          найденные строки и их длину.*/
@@ -82,7 +68,6 @@ public class Main {
             }
         }
 
-
         System.out.println("Самая длинная строка: " + longest + ". Длина строки - " + longest.length());
         System.out.println("Самая короткая строка: " + shortest + ". Длина строки - " + shortest.length());
 
@@ -95,12 +80,6 @@ public class Main {
 
         System.out.println(shortest + ", " + mid + ", " + longest); //вариант 1
 
-        String[] arrayStr = {lineOne, lineTwo, lineThree}; // второй вариант, создать массив
-
-        Arrays.sort(arrayStr, Comparator.comparingInt(String::length));// и отсортировать в массиве через компоратор
-        System.out.println(Arrays.toString(arrayStr));
-
-
         System.out.println("________________________________");
 
         System.out.println("Task 3.");
@@ -112,6 +91,8 @@ public class Main {
         int averageLineLenght;
 
         averageLineLenght = (lineOne.length() + lineTwo.length() + lineThree.length()) / 3;
+
+        String[] arrayStr = {lineOne, lineTwo, lineThree};
 
         System.out.println("Средняя длина строки составляет: " + averageLineLenght);
 
@@ -140,7 +121,19 @@ public class Main {
 
         System.out.println("Слово состоящее из различных символов: " + duplicateChars);
 
+        System.out.println("________________________________");
 
+        System.out.println("Task 5.");
+
+        /*5. Вывести на консоль новую строку, которой задублирована каждая буква из
+         * начальной строки. Например, "Hello" -> "HHeelllloo".*/
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < lineOne.length(); i++) {
+            sb.append(lineOne.charAt(i)).append(lineOne.charAt(i));
+        }
+        System.out.println(sb);
     }
 
     private static boolean hasUniqueChars(String str) {
