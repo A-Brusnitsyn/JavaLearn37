@@ -29,10 +29,10 @@ public class TaskStar {
         while (docMatch.find()) {
             System.out.println("Document number: " + docMatch.group());
         }
-        while (emailMatch.find()){
+        while (emailMatch.find()) {
             System.out.println("Email: " + emailMatch.group());
         }
-        while (phoneMatch.find()){
+        while (phoneMatch.find()) {
             System.out.println("Phone number: " + phoneMatch.group());
         }
     }
