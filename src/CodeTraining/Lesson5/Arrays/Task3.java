@@ -19,7 +19,6 @@ public class Task3 {
                 sum += number;
                 count++;
             }
-            number++;
         }
 
         // Вывод массива (для наглядности)
