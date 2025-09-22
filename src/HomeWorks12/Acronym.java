@@ -27,6 +27,7 @@ public class Acronym {
         while (matcher.find()) {
             System.out.println(matcher.group());
         }
+        scanner.close();
         //System.out.println(text.matches("[A-Z]{2,6}"));
     }
 }
