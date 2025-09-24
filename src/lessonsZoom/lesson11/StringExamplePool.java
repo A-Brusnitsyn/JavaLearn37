@@ -1,4 +1,4 @@
-package lessons.lesson11;
+package lessonsZoom.lesson11;
 
 public class StringExamplePool {
     public static void main(String[] args) {

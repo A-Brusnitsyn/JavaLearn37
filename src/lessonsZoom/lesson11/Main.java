@@ -1,6 +1,6 @@
-package lessons.lesson11;
+package lessonsZoom.lesson11;
 
-import lessons.lesson9.Dog;
+import lessonsZoom.lesson9.Dog;
 
 public class Main {
     public static void main(String[] args) {

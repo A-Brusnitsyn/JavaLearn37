@@ -1,4 +1,4 @@
-package lessons.lesson11;
+package lessonsZoom.lesson11;
 
 public class Tasks {
     public static void main(String[] args) {
