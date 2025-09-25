@@ -70,6 +70,5 @@ public class Main {
 
         System.out.println("Валидные договора документов сохранены по пути D:\\valid.txt, не валидные D:\\notValid.txt.");
 
-
     }
 }
