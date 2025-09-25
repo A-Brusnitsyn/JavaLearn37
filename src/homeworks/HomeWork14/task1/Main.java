@@ -16,12 +16,11 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Exception: " + e);
         }
-        String[] splitedBook=sb.toString().split("\\s+|\\-");
+        String[] splitedBook=sb.toString().split("\\W");
         String longestword="";
         for (String word:splitedBook){
-            String cleanWord=word.replaceAll("[^A-z]","");
             if (word.length()>longestword.length()){
-                longestword=cleanWord;
+                longestword=word;
             }
         }
         System.out.println("Самое длинное слово в книге - " + longestword + "\nСохраним его в файл result.txt на диске D");
