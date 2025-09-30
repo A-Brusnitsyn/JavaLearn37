@@ -32,7 +32,7 @@ public class Main {
            System.out.println("Нет такого файла!");
            ex.printStackTrace();  // Вариант 2 (вывод стека при исключении)
        }
-
+        sc.close();
 
     }
     public static File findFile(File[] files, String fileName) throws FileNotFoundException {

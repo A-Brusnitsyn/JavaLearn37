@@ -19,6 +19,7 @@ public class Main {
         String line = sc.nextLine();
         String[] arrLine =line.replace(".","").split(" ");
         System.out.println(Arrays.toString(arrLine));
+        sc.close();
 
         StringBuilder uniqueBuilder = new StringBuilder();
 
