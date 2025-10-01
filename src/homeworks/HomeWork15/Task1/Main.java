@@ -16,6 +16,7 @@ public class Main {
         line = sc.nextLine();
 
         String[] splittedLine = line.split(",");
+        sc.close();
 
         HashSet<Double> numbers = new HashSet<>();
 
