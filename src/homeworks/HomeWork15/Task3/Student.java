@@ -28,26 +28,26 @@ public class Student {
         return course;
     }
 
-    public double getAverageGrade(){
-        if (grades.isEmpty()){
+    public double getAverageGrade() {
+        if (grades.isEmpty()) {
             return 0;
         } else {
-            int sum=0;
-            for (int grade:grades){
-                sum+=grade;
+            int sum = 0;
+            for (int grade : grades) {
+                sum += grade;
             }
-            return (double) sum/grades.size();
+            return (double) sum / grades.size();
         }
     }
 
-    public void promote(){
+    public void promote() {
         this.course++;
     }
 
     @Override
     public String toString() {
         return "Студент:" +
-                name  +
+                name +
                 ", группа=" + group +
                 ", курс=" + course +
                 ", средний балл=" + getAverageGrade();

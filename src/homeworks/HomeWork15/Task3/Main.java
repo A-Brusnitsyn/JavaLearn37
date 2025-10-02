@@ -17,12 +17,12 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<>();
 
-        students.add(new Student("Иван Иванов","2a",2,Arrays.asList(1,2,4,5,5)));
-        students.add(new Student("Джеки Чан","3в",2,Arrays.asList(3,2,4,2,3)));
-        students.add(new Student("Джон Траволта","1б",1,Arrays.asList(3,3,3,3,2)));
-        students.add(new Student("Сильвестр Сталоне","4п",3,Arrays.asList(5,5,5,5,5)));
-        students.add(new Student("Дженифер Лопез","3е",3,Arrays.asList(4,4,2,3,2)));
-        students.add(new Student("Киану Ривз","3е",3,Arrays.asList()));
+        students.add(new Student("Иван Иванов", "2a", 2, Arrays.asList(1, 2, 4, 5, 5)));
+        students.add(new Student("Джеки Чан", "3в", 2, Arrays.asList(3, 2, 4, 2, 3)));
+        students.add(new Student("Джон Траволта", "1б", 1, Arrays.asList(3, 3, 3, 3, 2)));
+        students.add(new Student("Сильвестр Сталоне", "4п", 3, Arrays.asList(5, 5, 5, 5, 5)));
+        students.add(new Student("Дженифер Лопез", "3е", 3, Arrays.asList(4, 4, 2, 3, 2)));
+        students.add(new Student("Киану Ривз", "3е", 3, Arrays.asList()));
 
         System.out.println("Текущие студенты:");
         for (Student student : students) {
@@ -37,6 +37,7 @@ public class Main {
 
         printStudents(students, 3);
     }
+
     public static void removeStudents(List<Student> students) {
         // Создаем временный список для студентов, которые останутся
         ArrayList<Student> tempStudents = new ArrayList<>();
