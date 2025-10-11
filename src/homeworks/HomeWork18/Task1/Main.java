@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- Задача 1:
- Создать коллекцию класса ArrayList наполнить ее элементами типа Integer. С помощью
- Stream'oB:
- - Удалить дубликаты
- - Оставить только четные элементы
- - Вывести сумму оставшихся элементов в стриме
+ * Задача 1:
+ * Создать коллекцию класса ArrayList наполнить ее элементами типа Integer. С помощью
+ * Stream'oB:
+ * - Удалить дубликаты
+ * - Оставить только четные элементы
+ * - Вывести сумму оставшихся элементов в стриме
  */
 public class Main {
     public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class Main {
 
         int sum = numbers.stream()
                 .distinct() //удалить дубликаты
-                .filter(n-> n%2==0) // только четные эл-ты
+                .filter(n -> n % 2 == 0) // только четные эл-ты
                 .mapToInt(Integer::intValue) // преобразование в IntStream
                 .sum();
 

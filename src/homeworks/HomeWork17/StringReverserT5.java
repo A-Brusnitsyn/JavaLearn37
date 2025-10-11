@@ -3,7 +3,7 @@ package homeworks.HomeWork17;
 import java.util.Scanner;
 import java.util.function.Supplier;
 
-public class StringReverser {
+public class StringReverserT5 {
     public static void main(String[] args) {
         //Задача 5:
         //Используя Supplier написать метод, который будет возвращать введенную с консоли
