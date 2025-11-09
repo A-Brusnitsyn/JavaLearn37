@@ -13,5 +13,6 @@ public class Main {
                 .mapToInt(Integer::intValue)
                 .sum();
         System.out.println(sum);
+        System.out.println(Runtime.getRuntime().availableProcessors());
     }
 }
